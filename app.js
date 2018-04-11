@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
 
+const client = require('twilio')(creds.accountSid, creds.authToken);
+
+app.use("/", express.static("static"));
+
 app.get('/health', function(req, res){
     res.statusCode = 200;
     res.end(JSON.stringify({
@@ -36,8 +40,6 @@ app.post('/message', function(req, res) {
         res.json({error: 'no message in message field'});
         return;
     }
-    
-    const client = require('twilio')(creds.accountSid, creds.authToken);
 
     // send an sms message with twilio
     client.messages
@@ -46,9 +48,17 @@ app.post('/message', function(req, res) {
         from: creds.fromNumber,
         body: message
     })
-    .then((recResponse) => console.log(recResponse.sid));
-    res.json({
-        "result":"success"
+    .then((recResponse) => {
+        res.json({
+            "result":"success"
+        })  
+    })
+    .catch((e) => {
+        res.statusCode = 400;
+        res.json({
+            "result":"error: " + e.message
+        })
+        console.log(e);
     })
 });
 
