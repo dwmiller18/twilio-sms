@@ -13,7 +13,8 @@ function sendMessage() {
         url: "http://localhost:3000/message",
         data: getBody(),
         contentType: 'application/json',
-        success: function(){
+        success: function(data){
+            console.log(data);
             alert("message sent successfully");
         }
     });
