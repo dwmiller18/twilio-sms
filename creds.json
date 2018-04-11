@@ -1,0 +1,5 @@
+{
+    "accountSid": "Your account ID from Twilio",
+    "authToken": "Your Authorization Token from Twilio",
+    "fromNumber": "Your provisioned number from Twilio"
+}
