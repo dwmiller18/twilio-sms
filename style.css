@@ -1,0 +1,18 @@
+.center-this {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.main {
+    max-width: 900px;
+}
+
+.sms-text {
+    max-width: 430px;
+    width: 430px;
+}
+
+.smaller-section {
+    width: 250px;
+}
