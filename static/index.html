@@ -11,21 +11,43 @@
     <script src="sms.js"></script>
 
     <link href="style.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
+    <div class="jumbotron logo-header">
+            <img src="logo.png" class="img-fluid logo-header center-this" alt="Responsive image">
+
+    </div>
     <div class="container-fluid">
         <div class="center-this main">
-            <h1 class="text-center">SMS Demo</h1>
-            <h3 class="text-center">by Dustin Miller</h3>
-            <br>
-            <div class="container sms-text">
-                <div class="center-this smaller-section">
-                    <input type="text" name="phone" id="smsToNumber" placeholder="To Number">
-                    <input type="text" name="smsText" id="smsTextArea" placeholder="To Message"><br>
-                    <button type="button" class="btn btn-primary" id="sendButton" onclick="sendMessage()">Send</button>
+            <div class="border main-border">
+                <div class="inside-border">
+                    <h1 class="text-center">SMS Demo</h1>
+                    
+                    <br>
+                    <div class="container sms-text">
+                        <div class="center-this smaller-section">
+                            <p><input class="center-this" type="text" name="phone" id="smsToNumber" placeholder="To Number"></p>
+                            <p><input class="center-this" type="text" name="smsText" id="smsTextArea" placeholder="To Message"><br></p>
+                            <p><button type="button" class="btn action-button center-this" id="sendButton" onclick="sendMessage()">
+                                <i class="far fa-envelope"></i>
+                                <span>Send</span></button></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <div id="info"><h3 class="author">Dustin Miller</h3>>/div>
+
+
 </body>
 </html>

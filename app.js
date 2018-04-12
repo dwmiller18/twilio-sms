@@ -3,8 +3,8 @@ var app = express();        // creates an instance of express
 var port = 3000;            // sets the port for the service
 var fs = require('fs');     // imports file system module
 var creds = JSON.parse(fs.readFileSync('creds.json'));     // gets credentials from creds.json
-var bodyParser = require('body-parser');    //imports body-parser
-var logger = require('morgan');     // imports morgan
+var bodyParser = require('body-parser');    //imports body-parser allows response to see body
+var logger = require('morgan');     // imports morgan for logging
 var cors = require('cors');         // imports cors
 
 app.use(cors());        // cross origin resource sharing

@@ -16,3 +16,46 @@
 .smaller-section {
     width: 250px;
 }
+
+.logo-header {
+    max-height: 400px;
+    padding: 0rem 0rem !important;
+}
+
+.inside-border {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#info { 
+    height: 40px; 
+    position: fixed; 
+    bottom:0%;
+    width:100%; 
+    background-color: #4E5054; 
+    opacity: 1;
+}
+
+h3 {
+    color: #FF4F1F;
+}
+
+.action-button {
+    background-color: #FF4F1F !important;
+    color: white;
+}
+
+h1 {
+    color: #4E5054;
+}
+
+.main-border {
+    border-color: #FF4F1F !important;
+}
+
+.author {
+    padding-left: 15px;
+}
+
+/* gray text = #4E5054 */
+/* orange text = #FF4F1F */
